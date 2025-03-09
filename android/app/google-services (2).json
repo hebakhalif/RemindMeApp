@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856562901325",
+    "project_id": "taskaty-353d5",
+    "storage_bucket": "taskaty-353d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856562901325:android:c4f7c731d69ae035f99704",
+        "android_client_info": {
+          "package_name": "com.example.point_ease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGAmXuNOGpivOoTClVCj0IEP1JxPlbHvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
