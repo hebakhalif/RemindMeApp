@@ -27,22 +27,22 @@ class OnboardingWidget extends StatelessWidget {
             Center(
               child: Image.asset(
                 "assets/images/Ellipse 10.png",
-                width: 350,
-                height: 350,
+                width: 300.w,
+                height: 300.h,
               ),
             ),
             Center(
               child: Image.asset(
                 "assets/images/Vector 49.png",
-                width: 350,
-                height: 350,
+                width: 300.w,
+                height: 300.h,
               ),
             ),
              Center(
               child: Image.asset(
                 imagePath,
-                width: 350,
-                height: 350,
+                width: 300.w,
+                height: 300.h,
                
               ),
             ),
@@ -50,7 +50,7 @@ class OnboardingWidget extends StatelessWidget {
         ),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -61,9 +61,10 @@ class OnboardingWidget extends StatelessWidget {
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 90.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,

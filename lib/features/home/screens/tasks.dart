@@ -24,8 +24,8 @@ final IconData icons;
                       borderRadius: BorderRadius.circular(20),
                       color: colors,
                     ),
-                    width: 190,
-                    height: 200,
+                    width: 170,
+                    height: 180,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 10,

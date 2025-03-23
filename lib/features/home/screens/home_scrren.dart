@@ -20,13 +20,15 @@ class HomeScrren extends StatelessWidget {
               SizedBox(height: 30.h,),
               Row(
                 children: [
-                  Tasks(colors: const Color.fromARGB(230, 233, 195, 251),
+                  Tasks(
+                    colors: const Color.fromARGB(230, 233, 195, 251),
                    title: "personal",
                    icons: Icons.person_rounded,
                    ),
 
                     SizedBox(width: 10,),
-                    Tasks(colors: const Color.fromARGB(212, 241, 204, 144),
+                    Tasks(
+                      colors: const Color.fromARGB(212, 241, 204, 144),
                    title: "Work",
                    icons:Icons.work,
                    ),

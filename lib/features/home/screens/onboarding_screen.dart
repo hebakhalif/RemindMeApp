@@ -48,27 +48,30 @@ class _OnboardingMainScreenState extends State<OnboardingMainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundWhite,
-      body: Stack(
-        children: [
-          PageView.builder(
-            controller: _pageController,
-            itemCount: pageData.length,
-            onPageChanged: (index) {
-              setState(() {
-                currentStep = index;
-              });
-            },
-            itemBuilder: (context, index) {
-              return OnboardingWidget(
-                imagePath: pageData[index]["image"]!,
-                title: pageData[index]["title"]!,
-                description: pageData[index]["description"]!,
-                currentStep: currentStep,
-                onNextPressed: nextPage,
-              );
-            },
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 30),
+        child: Stack(
+          children: [
+            PageView.builder(
+              controller: _pageController,
+              itemCount: pageData.length,
+              onPageChanged: (index) {
+                setState(() {
+                  currentStep = index;
+                });
+              },
+              itemBuilder: (context, index) {
+                return OnboardingWidget(
+                  imagePath: pageData[index]["image"]!,
+                  title: pageData[index]["title"]!,
+                  description: pageData[index]["description"]!,
+                  currentStep: currentStep,
+                  onNextPressed: nextPage,
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
