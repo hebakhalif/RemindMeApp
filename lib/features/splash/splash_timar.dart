@@ -17,7 +17,7 @@ class SplashTimerScreenState extends State<SplashTimerScreen> {
   void initState() {
     super.initState();
     // الانتقال بعد 3 ثوانٍ
-    Timer(Duration(seconds: 6), () {
+    Timer(Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => OnboardingMainScreen()),
@@ -31,9 +31,9 @@ class SplashTimerScreenState extends State<SplashTimerScreen> {
       backgroundColor: AppColors.backgroundWhite,
       body: Center(
         child: Lottie.asset(
-          "assets/animations/animations.json",
-          width: 500.w,
-          height: 500.h,
+          "assets/animations/dKisvfA7r1.json",
+          width: 400.w,
+          height: 200.h,
         ),
       ),
     );

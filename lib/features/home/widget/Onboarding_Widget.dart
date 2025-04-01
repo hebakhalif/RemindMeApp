@@ -24,26 +24,11 @@ class OnboardingWidget extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Center(
-              child: Image.asset(
-                "assets/images/Ellipse 10.png",
-                width: 300.w,
-                height: 300.h,
-              ),
-            ),
-            Center(
-              child: Image.asset(
-                "assets/images/Vector 49.png",
-                width: 300.w,
-                height: 300.h,
-              ),
-            ),
              Center(
               child: Image.asset(
                 imagePath,
-                width: 300.w,
+                width: 500.w,
                 height: 300.h,
-               
               ),
             ),
           ],
@@ -52,54 +37,59 @@ class OnboardingWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(title, style: TextStyles.font24boldwhite),
-              Text(
-                description,
-                style: TextStyles.font45boldblack,
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
+              SizedBox(
+                height: 100,
+                child: Text(
+                  description,
+                  style: TextStyles.font25boldblack,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
               SizedBox(height: 90.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: List.generate(3, (index) {
-                      bool isActive = currentStep == index;
-                      return AnimatedContainer(
-                        duration: Duration(milliseconds: 300),
-                        margin: EdgeInsets.all(4),
-                        width: isActive ? 15 : 10,
-                        height:
-                            isActive
-                                ? 15
-                                : 10, 
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color:
-                              currentStep == index ? Colors.black : Colors.grey,
+              Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: List.generate(3, (index) {
+                        bool isActive = currentStep == index;
+                        return AnimatedContainer(
+                          duration: Duration(milliseconds: 300),
+                          margin: EdgeInsets.all(4),
+                          width: isActive ? 15 : 10,
+                          height:
+                              isActive
+                                  ? 15
+                                  : 10, 
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color:
+                                currentStep == index ? const Color.fromARGB(255, 77, 102, 76) : Colors.grey,
+                          ),
+                        );
+                      }),
+                    ),
+                    SizedBox(width: 60.w),
+                    Material(
+                      borderRadius: BorderRadius.circular(30),
+                      color: const Color.fromARGB(255, 77, 102, 76),
+                        child: IconButton(
+                        onPressed: onNextPressed, 
+                        icon: Icon(
+                          Icons.arrow_right_alt_rounded,
+                          color: Colors.white,
+                          size: 40,
                         ),
-                      );
-                    }),
-                  ),
-                  SizedBox(width: 60.w),
-                  Material(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.black,
-                    child: IconButton(
-                      onPressed: onNextPressed, // استخدام الدالة مباشرة
-                      icon: Icon(
-                        Icons.arrow_right_alt_rounded,
-                        color: Colors.white,
-                        size: 40,
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

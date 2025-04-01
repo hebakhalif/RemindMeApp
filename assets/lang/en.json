@@ -1,0 +1,25 @@
+{
+   "welcome": "Welcome! Take it easy, and I’ll help you get things done without stress",
+    "Procratination": "Procrastination level: Mastered",
+    "worksmart": "Work smart, not hard… or just nap?",
+    "taskttitel": "Task",
+    "search task": "Search Task",
+    "completedbotton": "Completed",
+    "deleted" : "Deleted",
+    "nowtask": "No Task Yet",
+    "homedescription": "From ongoing projects to future work plans\nanything can be recorded here Tap + to",
+    "homedescription3": "quick add",
+    "canceltext":" Cancel",
+    "newtask": "New Task",
+    "save":"Save",
+    "task_title":"   Task Title",
+    "due_date":" Due Date: ",
+    "duration":"Duration:",
+    "duration_days":" days",
+    "description_Sheet_bot":  "the task duration and due date will determine the task reminders and your status",
+    "delete_task":" Delete Task",
+    "Select_Language": "Select Language",
+    "Ok":"Ok",
+    "Time":"Time"
+
+}

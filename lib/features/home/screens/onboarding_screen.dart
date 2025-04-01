@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:point_ease/core/themes/app_colors.dart';
 import 'package:point_ease/features/home/widget/Onboarding_Widget.dart';
@@ -13,19 +14,19 @@ class _OnboardingMainScreenState extends State<OnboardingMainScreen> {
 
   final List<Map<String, String>> pageData = [
     {
-      "image": "assets/images/Group 116.png",
-      "title": "",
-      "description": "Manage your task and ideas quickly",
+      "image": "assets/images/task.png",
+      "title": "", // استخدم المفتاح بدلاً من النص المباشر
+      "description": "welcome",
     },
     {
-      "image": "assets/images/Why_To_Do_Lists_Don_t_Work-removebg-preview.png",
+      "image": "assets/images/tasksleep.png",
       "title": "",
-      "description": "Achieve your goals with simple steps",
+      "description": "Procratination",
     },
     {
-      "image": "assets/images/download__25_-removebg-preview.png",
+      "image": "assets/images/taskstudy.png",
       "title": "",
-      "description": "Every small step takes you closer to success",
+      "description": "worksmart",
     },
   ];
 
@@ -49,7 +50,7 @@ class _OnboardingMainScreenState extends State<OnboardingMainScreen> {
     return Scaffold(
       backgroundColor: AppColors.backgroundWhite,
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30),
+        padding: const EdgeInsets.symmetric(vertical: 60),
         child: Stack(
           children: [
             PageView.builder(
@@ -63,8 +64,8 @@ class _OnboardingMainScreenState extends State<OnboardingMainScreen> {
               itemBuilder: (context, index) {
                 return OnboardingWidget(
                   imagePath: pageData[index]["image"]!,
-                  title: pageData[index]["title"]!,
-                  description: pageData[index]["description"]!,
+                  title: pageData[index]["title"]!.tr(), // ✅ الترجمة هنا
+                  description: pageData[index]["description"]!.tr(), // ✅ الترجمة هنا
                   currentStep: currentStep,
                   onNextPressed: nextPage,
                 );
