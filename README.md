@@ -1,16 +1,14 @@
 # RemindMeApp
 
-A new Flutter project.
+TaskEase is a simple and stress-free productivity app that helps you manage your daily tasks with ease.  
+The app supports multiple languages and a clean UI for a smooth user experience.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# :iphone: Screens
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Icon App
+ <p align="center">
+  <img src="![WhatsApp Image 2025-05-06 at 00 46 46_94c99aad](https://github.com/user-attachments/assets/9e2798a1-268f-4e48-99c8-a795a55ea591)
+" alt="" width="400"/>
+</p>
+<p align="center"><i>شرح الصورة هنا</i></p>
