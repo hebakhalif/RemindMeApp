@@ -1,4 +1,4 @@
-# point_ease
+# RemindMeApp
 
 A new Flutter project.
 
