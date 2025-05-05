@@ -9,6 +9,6 @@ The app supports multiple languages and a clean UI for a smooth user experience.
 # Icon App
  <p align="center">
   <img src="![WhatsApp Image 2025-05-06 at 00 46 46_94c99aad](https://github.com/user-attachments/assets/9e2798a1-268f-4e48-99c8-a795a55ea591)
-" alt="" width="400"/>
+" width="400"/>
 </p>
-<p align="center"><i>شرح الصورة هنا</i></p>
+
