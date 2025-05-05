@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:point_ease/core/routing/app_router.dart';
 import 'package:point_ease/core/routing/router.dart';
 
-class TasKaty extends StatelessWidget {
+class RemindMe extends StatelessWidget {
   final AppRouter appRouter;
-  const TasKaty({super.key, required this.appRouter});
+  const RemindMe({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {

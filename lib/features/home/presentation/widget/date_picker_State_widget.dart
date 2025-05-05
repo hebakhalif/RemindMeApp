@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:point_ease/features/home/widget/Time_Picker_Widget.dart';
+import 'package:point_ease/features/home/presentation/widget/Time_Picker_Widget.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:point_ease/core/themes/app_colors.dart';
 import 'package:point_ease/core/themes/styles.dart';
@@ -18,6 +18,7 @@ class _DatepickerWidgetState extends State<DatepickerWidget> {
   DateTime? startDate;
   DateTime? endDate;
   int? durationDays;
+  bool isDue = false;
  
  TimeOfDay selectedTime = TimeOfDay.now();
   @override
@@ -69,6 +70,8 @@ class _DatepickerWidgetState extends State<DatepickerWidget> {
                       ),
                     ),
                     Divider(thickness: 1, indent: 6, endIndent: 1, height: 20),
+
+                    
                     Row(
                       children: [
                         Icon(
@@ -160,28 +163,31 @@ class _DatepickerWidgetState extends State<DatepickerWidget> {
                 }
               },
               // time widget
-              child: Row(
-                children: [
-                Text(
-                  "Time".tr(),
-                style: TextStyles.font17Greybold,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+                child: Row(
+                  children: [
+                  Text(
+                    "Time".tr(),
+                  style: TextStyles.font17Greybold,
+                  ),
+                  Spacer(flex: 1,),
+                   Container(
+                    height: 40.h,
+                  padding: EdgeInsets.symmetric(horizontal: 7, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(104, 0, 0, 0),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  // عرض الوقت الحالي
+                  child: Text(
+                    // تنسيق الوقت باستخدام خاصية format
+                    selectedTime.format(context), 
+                    style: TextStyle(color: AppColors.backgroundWhite, fontSize: 16),
+                  ),
                 ),
-                Spacer(flex: 1,),
-                 Container(
-                  height: 40,
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(104, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10),
+                  ],
                 ),
-                // عرض الوقت الحالي
-                child: Text(
-                  // تنسيق الوقت باستخدام خاصية format
-                  selectedTime.format(context), 
-                  style: TextStyle(color: Colors.red, fontSize: 16),
-                ),
-              ),
-                ],
               )
             ),
 

@@ -14,7 +14,7 @@ import 'package:point_ease/taskaty.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(TasKaty(
+    await tester.pumpWidget(RemindMe(
       appRouter: AppRouter(),
     ));
 

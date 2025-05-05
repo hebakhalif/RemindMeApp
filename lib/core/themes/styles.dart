@@ -48,5 +48,10 @@ class TextStyles {
     color: Colors.black45,
     fontSize: 14.sp,
   );
+
+   static TextStyle font17witabold = TextStyle(
+    color: AppColors.backgroundWhite,
+    fontSize: 17.sp,
+  );
   
 }

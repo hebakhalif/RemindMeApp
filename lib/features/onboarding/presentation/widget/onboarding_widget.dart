@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:point_ease/core/themes/styles.dart';
+import 'package:point_ease/features/onboarding/data/models/onbording_model.dart';
 
 class OnboardingWidget extends StatelessWidget {
-  final String imagePath;
-  final String title;
-  final String description;
-  final int currentStep;
+  final OnbordingModel model;
+  final int currentStep; 
   final VoidCallback onNextPressed; // دالة التنقل بين الصفحات
 
   const OnboardingWidget({
-    required this.imagePath,
-    required this.title,
-    required this.description,
+    required this.model,
     required this.currentStep,
     required this.onNextPressed,
   });
@@ -22,28 +19,24 @@ class OnboardingWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Stack(
-          children: [
-             Center(
-              child: Image.asset(
-                imagePath,
-                width: 500.w,
-                height: 300.h,
-              ),
-            ),
-          ],
-        ),
+        Center(
+         child: Image.asset(
+          model.image,
+           width: 500.w,
+           height: 300.h,
+         ),
+   ),
 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(title, style: TextStyles.font24boldwhite),
+              Text(model.title, style: TextStyles.font24boldwhite),
               SizedBox(
                 height: 100,
                 child: Text(
-                  description,
+                  model.description,
                   style: TextStyles.font25boldblack,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,

@@ -18,7 +18,7 @@ Future<TimeOfDay?> showIosTimePicker(BuildContext context, TimeOfDay initialTime
     context: context,
     barrierDismissible: true,        // إغلاق الحوار عند الضغط خارج النافذة
     barrierLabel: 'TimePicker',
-    barrierColor: Colors.black54,    // خلفية شفافة خلف الحوار
+    barrierColor: const Color.fromARGB(137, 0, 0, 0),    // خلفية شفافة خلف الحوار
     pageBuilder: (context, anim1, anim2) {
       // سنستخدم متغير مؤقت لتخزين الوقت المختار داخل الحوار
       DateTime selectedDateTime = initialDateTime;
@@ -30,7 +30,7 @@ Future<TimeOfDay?> showIosTimePicker(BuildContext context, TimeOfDay initialTime
           child: Container(
             width: 250, // يمكنك تعديل العرض حسب التصميم
             decoration: BoxDecoration(
-              color: Color(0xFF2C2C2E), // لون داكن مشابه لـ iOS
+              color: Color.fromARGB(255, 44, 46, 44), // لون داكن مشابه لـ iOS
               borderRadius: BorderRadius.circular(12),
             ),
             child: Column(
@@ -47,11 +47,12 @@ Future<TimeOfDay?> showIosTimePicker(BuildContext context, TimeOfDay initialTime
                         ),
                       ),
                     ),
+                    
                     child: CupertinoDatePicker(
                       mode: CupertinoDatePickerMode.time,
                       use24hFormat: false,             // false = صيغة 12 ساعة مع AM/PM
                       initialDateTime: initialDateTime,
-                      backgroundColor: Colors.transparent,
+                      backgroundColor: const Color.fromARGB(0, 134, 194, 32),
                       onDateTimeChanged: (DateTime newDateTime) {
                         selectedDateTime = newDateTime;
                       },

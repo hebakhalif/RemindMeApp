@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:point_ease/core/themes/app_colors.dart';
 import 'package:point_ease/core/themes/styles.dart';
-import 'package:point_ease/features/home/widget/Custombutton.dart';
-import 'package:point_ease/features/home/widget/DatePickerState.dart';
+import 'package:point_ease/core/helpers/custom_button.dart';
+import 'package:point_ease/features/home/presentation/widget/date_picker_State_widget.dart';
 
 class BottomSheetHelper {
   static void show(BuildContext context){
@@ -81,6 +81,7 @@ class BottomSheetHelper {
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText:"task_title".tr(),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 13),
                           hintStyle: TextStyle(color: Colors.grey),
                         ),
                         minLines: 2,
@@ -98,6 +99,7 @@ class BottomSheetHelper {
                          "description_Sheet_bot".tr(),
                            style: TextStyles.font13blak45bold,
                         ),
+            
                         SizedBox(height: 30.h),
                         Custombutton(
                           text:"delete_task".tr(),
